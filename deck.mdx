@@ -1,12 +1,42 @@
 import { Head } from 'mdx-deck'
-
+import { CodeSurfer } from "mdx-deck-code-surfer"
 export { default as theme } from './theme'
 
 <Head>
   <title>Presentation Title</title>
 </Head>
 
-# Hello
+# Shared Components
+
+#### Sharing code in React with HOCs, Render Props, and Hooks
+
+---
+
+<CodeSurfer
+  title="Simple React w/ JSX"
+  code={require("!raw-loader!./code/react-with-jsx.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "JSX is weird but makes life easier." },
+    { lines: [3], notes: "What even is this?" }
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Simple React without JSX"
+  code={require("!raw-loader!./code/react-without-jsx.js")}
+  lang="javascript"
+  showNumbers={false}
+  dark={false}
+  steps={[
+    { notes: "It's a little clearer what's happening." },
+    { lines: [3], notes: "'It's just javascript.'" }
+  ]}
+/>
 
 ---
 
